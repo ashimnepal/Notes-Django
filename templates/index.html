@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDos Daily</title>
+</head>
+<body>
+    <h1>My All ToDos</h1>
+    <a href="add-todo/">
+        <button>Add Todo</button>
+    </a>
+    {% for todo in all_todos %}
+        <p>{{forloop.counter}}. {{todo.content}}
+            <button type="submit">Edit</button>
+            <a href="/delete-todo/{{todo.id}}/"><button type="submit" action="">Delete</button></a>
+        </p>
+    {% endfor %}
+    
+</body>
+</html>
