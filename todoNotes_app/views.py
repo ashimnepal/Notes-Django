@@ -2,10 +2,13 @@ from django.shortcuts import render
 from todoNotes_app.models import TODONotes
 from django.http import HttpResponseRedirect
 # Create your views here.
+
+
+#to list all the objects
 def todo_list(request):
     todos = TODONotes.objects.all()
     records = {"all_todos":todos}
-    return render(request, "index.html",records)
+    return render(request, "bootstrap/index.html",records)
 
 def add_todo(request):
     if request.method == 'POST':        
