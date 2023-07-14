@@ -11,8 +11,8 @@
     </a>
     {% for todo in all_todos %}
         <p>{{forloop.counter}}. {{todo.content}}
-            <a href="/edit-todo/{{todo.id}}/"><button type="submit">Edit</button></a>
-            <a href="/delete-todo/{{todo.id}}/"><button type="submit" action="">Delete</button></a>
+            <a href=""><button type="submit">Edit</button></a>
+            <a href=""><button type="submit" action="">Delete</button></a>
         </p>
     {% endfor %}
     
