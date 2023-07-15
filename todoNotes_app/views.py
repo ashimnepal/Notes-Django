@@ -16,7 +16,7 @@ def add_todo(request):
         new_todo_item.save()
         return HttpResponseRedirect("/")
     else:
-        return render(request, "add_todo.html")
+        return render(request, "bootstrap/add_todo.html")
 
 def delete_todo(request,pk):
     delete_todo_item = TODONotes.objects.get(pk=pk)
@@ -31,6 +31,6 @@ def item_update(request,pk):
         return HttpResponseRedirect("/")
     else:
         update_item = TODONotes.objects.get(pk=pk)
-        return render(request, "item_edit.html", {"todo_edit": update_item},)
+        return render(request, "bootstrap/item_edit.html", {"todo_edit": update_item},)
 
    
